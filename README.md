@@ -1,9 +1,9 @@
-# cookie-stand
-LAB -06
 
-Project:cookie-stand
+# LAB -06
 
-Author: Rula Al-Qasem
+## Project:cookie-stand
+
+### Author: Rula Al-Qasem
 
 
 Links and Resources
