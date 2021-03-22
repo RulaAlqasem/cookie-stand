@@ -5,29 +5,40 @@ let h = ['6am ','7am ','8am ','9am ','10am ','11am ','12pm ','1pm ','2pm ','3pm 
 function getRandom(min,max){
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
+
+
 const container = document.getElementById('store');
 const articleEl = document.createElement('article');
 container.appendChild(articleEl);
 const tableEl = document.createElement('table');
 articleEl.appendChild(tableEl);
+
+
 console.log(h);
+
+
+
 let totaloftotal=0;
 let footerdata = [];
+
+
 for (let i = 0; i < h.length; i++) {
   footerdata.push(0);
 }
+
+
+
 function footer(){
 
   const headerRowEl2 = document.createElement('tr');
   tableEl.appendChild(headerRowEl2);
-  const td3 =document.createElement('td');
+  const td3 =document.createElement('th');
   headerRowEl2.appendChild(td3);
-  td3.textContent='total';
+  td3.textContent='Totals';
   for (let i = 0; i < footerdata.length; i++) {
     const td3 =document.createElement('td');
     headerRowEl2.appendChild(td3);
     td3.textContent=footerdata[i];
-
   }
   for (let i = 0; i < h.length; i++) {
     totaloftotal+= footerdata[i];
@@ -36,6 +47,8 @@ function footer(){
   headerRowEl2.appendChild(td4);
   td4.textContent=totaloftotal;
 }
+
+
 function renderHeader(){
 
   const headerRowEl = document.createElement('tr');
@@ -47,11 +60,11 @@ function renderHeader(){
     const th1El = document.createElement('th');
     headerRowEl.appendChild(th1El);
     th1El.textContent = `${h[i]}`;
-
   }
+
   const th3El = document.createElement('th');
   headerRowEl.appendChild(th3El);
-  th3El.textContent = 'total';
+  th3El.textContent = 'Daily Location Total';
 }
 
 
@@ -65,6 +78,7 @@ function Stand(location, max,min, avg,custBerH,cookiesPerH,total) {
   this.total=total;
   this.totalstor=[];
 }
+
 Stand.prototype.getCust =function(){
   for (let i=0; i < h.length; i++) {
     this.custBerH.push( Math.floor(getRandom (this.min, this.max)));
@@ -89,14 +103,13 @@ Stand.prototype.render= function(){
   this.total;
   const headerRowE2 = document.createElement('tr');
   tableEl.appendChild(headerRowE2);
-  const td1El = document.createElement('td');
-  headerRowE2.appendChild(td1El);
-  td1El.textContent=`${this.location}`;
+  const th1El = document.createElement('th');
+  headerRowE2.appendChild(th1El);
+  th1El.textContent=`${this.location}`;
   for(let i=0; i< h.length; i++)
   {
     const td1El = document.createElement('td');
     headerRowE2.appendChild(td1El);
-
     td1El.textContent = `${this.cookiesPerH[i]}`;
 
   }
