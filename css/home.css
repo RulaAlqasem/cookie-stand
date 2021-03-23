@@ -147,3 +147,11 @@ footer ul li a{
     color: rgb(78, 50, 46);
   
 }
+body > footer > ul:nth-child(2){
+    text-align: center;
+    list-style: none;
+    margin-top: 0px;
+    color: rgb(131, 79, 70);
+    font-size: 20px;
+    padding-top: 0px;
+}
