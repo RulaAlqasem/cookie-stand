@@ -29,3 +29,16 @@ h1{
     font-family: 'Berkshire Swash', cursive;
 } 
 
+button{
+    display: block;
+    width: 116px;
+    height: 36px;
+    margin-left: 20px;
+    color: white;
+    background-color: black;
+margin-top: 40px;}
+
+    button:hover {
+        background-color:rgb(170, 87, 87);
+        animation-duration: 350ms;
+        }
