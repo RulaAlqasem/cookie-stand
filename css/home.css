@@ -1,0 +1,149 @@
+header{
+    background-color: gray;
+    margin-bottom: 0px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+  
+}
+header h1{
+    text-align: center;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    padding-top: 20px;
+}
+.navlua ul {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    display:inline-block;
+    vertical-align:top;
+    margin-top: 55px;
+  }
+  .navlua ul li{
+      display: inline;
+    margin-top: 110mm;  }
+header .navlua ul li a{
+    text-decoration:none;
+    margin-left: 40px;
+    color: #000;
+    
+}
+header img{
+    margin-top: 30px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    width: 70px;
+   width: 200px;
+   margin-left: 40px;
+}
+
+.nav2{
+    margin-left: 20px;
+}
+#nav1{
+
+    text-decoration:none;
+    margin-left: 0px;
+}
+
+#imf{
+    
+    margin-top: 20px;
+    height: 400px;
+    margin-left: 40px;
+
+    width: 95%;
+}
+main ul{
+list-style: none;
+}
+main ul li{
+display: inline;
+}
+main ul li img{
+width: 400px;
+margin-right: 28.3437px;
+}
+#right{
+float: right;
+
+width: 50%;
+margin-top: 22px;
+height: 458px;
+margin-right: 28px;
+margin-bottom: 20px;
+}
+main div img{
+margin-top: 20px;
+margin-left: 40px;
+margin-right: 10px;
+float: left;
+width: 550px;
+margin-bottom: 15px;
+}
+button{
+display: block;
+width: 116px;
+height: 36px;
+margin-left: 20px;
+color: white;
+background-color: black;}
+main section p{
+
+max-height: 330px;
+
+
+}
+#right > p{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    max-height: 330px;
+    width: 900px;
+    margin-left: 15px;
+    text-align:unset;
+    color: #c32e2b;
+    
+}
+#right h1{
+    font-size: 30px;
+font-weight: bolder;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color: #771615;
+}
+button:hover {
+background-color:rgb(170, 87, 87);
+animation-duration: 350ms;
+}
+footer {
+    text-align: center;
+clear: both;
+background-color: gray;
+height: 250px;
+}
+footer h4{
+    margin-top: 50px;
+    display: inline;}
+    
+footer ul{
+    list-style: none;
+    text-align: center;
+    list-style: none;
+    margin-top: 0px;
+    padding-top: 100px;
+    color: rgb(131, 79, 70);
+    font-size: 20px;
+}
+footer ul li{
+    direction: none;
+    display: inline;
+    margin-right: 20px;
+    
+}
+footer ul li a{
+    direction: none;
+    text-decoration: none;
+    color: rgb(78, 50, 46);
+  
+}
