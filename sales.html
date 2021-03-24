@@ -16,20 +16,47 @@
     <header>
         <h1></h1>
     </header>
-    <center>
+  
     <main>
+        <center>
         <h1>Pat's Salmon Cookies: Sales Data </h1>
         
         <section id="store">
         </section>
 
         <button onclick="location.href='./index.html'" type="button">Home</button>
+    </center>
+    <form action="" id="storeForm">
+        <fieldset>
+           <!--location, max,min, avg,custBerH,cookiesPerH,total-->
+<legend>Add New Store</legend>
+<label for="locations">location</label>
+<input type="text" name="location" id="location">
+<br/>
+<br/>
+<label for="max">Max/Cust</label>
+<input type="number" name="max" id="max">
+<br/>
+<br/>
+<label for="min">min/Cust</label>
+<input type="number" name="min" id="min">
+<br/>
+<br/>
+<label for="avg">Avg Cookie / Sale</label>
+<input type="text" name="avg" id="avg">
+<br/>
+<br/>
+<input type="submit" value="Add New Store" >
+
+        </fieldset>
+    </form>
     </main>
     <footer>
         <script src="./js/main.js"></script>
     </footer>
    
-</center>
+
+
 
 </body>
 </html>

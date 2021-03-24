@@ -30,6 +30,7 @@ for (let i = 0; i < h.length; i++) {
 
 function footer(){
 
+
   const headerRowEl2 = document.createElement('tr');
   tableEl.appendChild(headerRowEl2);
   const td3 =document.createElement('th');
@@ -46,6 +47,9 @@ function footer(){
   const td4 =document.createElement('td');
   headerRowEl2.appendChild(td4);
   td4.textContent=totaloftotal;
+
+
+
 }
 
 
@@ -119,6 +123,52 @@ Stand.prototype.render= function(){
 
 
 };
+//location, max,min, avg,custBerH,cookiesPerH,total-->
+
+const storeForm =document.getElementById('storeForm');
+storeForm.addEventListener('submit', AddNewStore);
+function AddNewStore(event){
+ 
+  var rowtodelet = tableEl.rows.length;
+
+  tableEl.deleteRow(rowtodelet-1);
+
+  event.preventDefault();
+  let location= event.target.location.value;
+  let max = Number(event.target.max.value);
+  let min =Number(event.target.min.value);
+  let avg = Number(event.target.avg.value);
+
+  let newStore = new Stand(location,max, min, avg,[],[],0);
+
+
+
+
+  newStore.render();
+
+  const headerRowEl22 = document.createElement('tr');
+  tableEl.appendChild(headerRowEl22);
+  const td33 =document.createElement('th');
+  headerRowEl22.appendChild(td33);
+  td33.textContent='Totals';
+  for (let i = 0; i < footerdata.length; i++) {
+    const td33 =document.createElement('td');
+    headerRowEl22.appendChild(td33);
+    td33.textContent=footerdata[i];
+  }
+  for (let i = 0; i < h.length; i++) {
+    totaloftotal+= footerdata[i];
+  }
+  const td44 =document.createElement('td');
+  headerRowEl22.appendChild(td44);
+  td44.textContent=totaloftotal;
+
+
+}
+//function totalsTR() {
+//headerRowE2.remove(1);
+//headerRowE2.add(1);
+//}
 
 renderHeader();
 const stand1 = new Stand('Seattle', 65, 23, 6.3,[],[],0);
@@ -132,4 +182,7 @@ const stand4 = new Stand('Paris', 38, 20, 2.3,[],[],0);
 stand4.render();
 const stand5 = new Stand('Lima', 16, 2, 4.6,[],[],0);
 stand5.render();
+
 footer();
+
+
