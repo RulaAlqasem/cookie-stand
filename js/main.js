@@ -14,13 +14,12 @@ const tableEl = document.createElement('table');
 articleEl.appendChild(tableEl);
 
 
-console.log(h);
 
 
 
-let totaloftotal=0;
+
 let footerdata = [];
-
+let allTotal=0;
 
 for (let i = 0; i < h.length; i++) {
   footerdata.push(0);
@@ -40,13 +39,12 @@ function footer(){
     const td3 =document.createElement('td');
     headerRowEl2.appendChild(td3);
     td3.textContent=footerdata[i];
+    allTotal=allTotal+footerdata[i];
   }
-  for (let i = 0; i < h.length; i++) {
-    totaloftotal+= footerdata[i];
-  }
+
   const td4 =document.createElement('td');
   headerRowEl2.appendChild(td4);
-  td4.textContent=totaloftotal;
+  td4.textContent=allTotal;
 
 
 
@@ -96,8 +94,9 @@ Stand.prototype.getCookies = function () {
     this.cookiesPerH.push( Math.floor( this.custBerH[i]*this.avg));
     this.total=this.total+this.cookiesPerH[i];
     footerdata[i]+=this.cookiesPerH[i];
+
   }
-  this.totalstor.push(this.total);
+
 },
 
 Stand.prototype.render= function(){
@@ -128,11 +127,11 @@ Stand.prototype.render= function(){
 const storeForm =document.getElementById('storeForm');
 storeForm.addEventListener('submit', AddNewStore);
 function AddNewStore(event){
- 
-  var rowtodelet = tableEl.rows.length;
+
+  const rowtodelet = tableEl.rows.length;
 
   tableEl.deleteRow(rowtodelet-1);
-
+  allTotal=0;
   event.preventDefault();
   let location= event.target.location.value;
   let max = Number(event.target.max.value);
@@ -146,29 +145,11 @@ function AddNewStore(event){
 
   newStore.render();
 
-  const headerRowEl22 = document.createElement('tr');
-  tableEl.appendChild(headerRowEl22);
-  const td33 =document.createElement('th');
-  headerRowEl22.appendChild(td33);
-  td33.textContent='Totals';
-  for (let i = 0; i < footerdata.length; i++) {
-    const td33 =document.createElement('td');
-    headerRowEl22.appendChild(td33);
-    td33.textContent=footerdata[i];
-  }
-  for (let i = 0; i < h.length; i++) {
-    totaloftotal+= footerdata[i];
-  }
-  const td44 =document.createElement('td');
-  headerRowEl22.appendChild(td44);
-  td44.textContent=totaloftotal;
-
+  footer();
+  storeForm.reset();
 
 }
-//function totalsTR() {
-//headerRowE2.remove(1);
-//headerRowE2.add(1);
-//}
+
 
 renderHeader();
 const stand1 = new Stand('Seattle', 65, 23, 6.3,[],[],0);
