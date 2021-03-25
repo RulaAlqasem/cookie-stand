@@ -1,7 +1,7 @@
 table{
     background-color: rgb(114, 79, 79);
     text-align: center;
-
+    margin-top: 40px;
     height: 140px;
 
 }
@@ -9,7 +9,9 @@ table th{
     background-color: rgb(194, 138, 147);
 }
 
-
+input{
+    background-color: rgb(245, 206, 206);
+}
 table tr th {
 font-size: 20px;
     background-color:rgb(123, 123, 182);
@@ -41,4 +43,24 @@ margin-top: 40px;}
     button:hover {
         background-color:rgb(170, 87, 87);
         animation-duration: 350ms;
+        }
+        #storeForm > fieldset{
+            border: 20px;
+            border: solid;
+            border-color: rgb(123, 123, 182);
+            font-family: 'Berkshire Swash', cursive;
+            background-color:rgb(209, 155, 155);
+        }
+        #storeForm > fieldset > input[type=submit]:nth-child(10){
+            background-color:rgb(123, 123, 182) ;
+            font-family: 'Berkshire Swash', cursive;
+            border: solid;
+            border-style:dashed;
+            border-color: rgb(71, 71, 117);
+        }
+        #storeForm > fieldset > input[type=submit]:hover{
+            /*background-color:silver;*/
+            background-color:seashell;
+            
+            animation-duration: 350ms;
         }

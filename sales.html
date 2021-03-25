@@ -20,36 +20,32 @@
     <main>
         <center>
         <h1>Pat's Salmon Cookies: Sales Data </h1>
-        
+        <form action="" id="storeForm">
+            <fieldset>
+               <!--location, max,min, avg,custBerH,cookiesPerH,total-->
+    <legend style="background-color: mistyrose; border: solid; border-color:rgb(123, 123, 182);padding-left: 25px;padding-right: 25px ;">Add New Store</legend>
+    <label for="locations" style="padding-left: 50px;"> location</label>
+    <input type="text" name="location" id="location" required>
+    
+    <label for="max" style='padding-left: 50px;'>Max/Cust</label >
+    <input type="number" name="max" id="max" required>
+    
+    <label for="min" style='padding-left: 50px;'>min/Cust</label >
+    <input type="number" name="min" id="min" required>
+    
+    <label for="avg" style='padding-left: 50px;'>Avg Cookie / Sale</label >
+    <input type="text" name="avg" id="avg" required>
+    
+    <input type="submit" value="Add New Store" style='margin-left: 50px;'  >
+    
+            </fieldset>
+        </form>
         <section id="store">
         </section>
 
         <button onclick="location.href='./index.html'" type="button">Home</button>
     </center>
-    <form action="" id="storeForm">
-        <fieldset>
-           <!--location, max,min, avg,custBerH,cookiesPerH,total-->
-<legend>Add New Store</legend>
-<label for="locations">location</label>
-<input type="text" name="location" id="location" required>
-<br/>
-<br/>
-<label for="max">Max/Cust</label>
-<input type="number" name="max" id="max" required>
-<br/>
-<br/>
-<label for="min">min/Cust</label>
-<input type="number" name="min" id="min" required>
-<br/>
-<br/>
-<label for="avg">Avg Cookie / Sale</label >
-<input type="text" name="avg" id="avg" required>
-<br/>
-<br/>
-<input type="submit" value="Add New Store" >
-
-        </fieldset>
-    </form>
+   
     </main>
     <footer>
         <script src="./js/main.js"></script>

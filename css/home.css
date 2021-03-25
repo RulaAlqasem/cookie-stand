@@ -1,3 +1,6 @@
+body{
+    font-family: 'Berkshire Swash', cursive;
+}
 header{
     background-color: gray;
     margin-bottom: 0px;
@@ -155,4 +158,12 @@ body > footer > ul:nth-child(2){
     color: rgb(131, 79, 70);
     font-size: 20px;
     padding-top: 0px;
+}
+ label{
+    font-family: 'Berkshire Swash', cursive;
+    margin-left: 50px;
+}
+#storeForm > fieldset > label{
+    font-family: 'Berkshire Swash', cursive;
+    padding-left: 50px;
 }

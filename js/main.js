@@ -57,6 +57,7 @@ function renderHeader(){
   tableEl.appendChild(headerRowEl);
   const th1El = document.createElement('th');
   headerRowEl.appendChild(th1El);
+  th1El.textContent = ' Hour                     ـــــــــــــــــ            location';
   for(let i=0; i< h.length; i++)
   {
     const th1El = document.createElement('th');
